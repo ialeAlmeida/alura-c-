@@ -12,3 +12,4 @@ C:\Users\almei\OneDrive\Desktop\PrimeiraAplicacao\PrimeiraAplicacao\obj\Debug\ne
 C:\Users\almei\OneDrive\Desktop\PrimeiraAplicacao\PrimeiraAplicacao\obj\Debug\net8.0\PrimeiraAplicacao.pdb
 C:\Users\almei\OneDrive\Desktop\PrimeiraAplicacao\PrimeiraAplicacao\obj\Debug\net8.0\PrimeiraAplicacao.genruntimeconfig.cache
 C:\Users\almei\OneDrive\Desktop\PrimeiraAplicacao\PrimeiraAplicacao\obj\Debug\net8.0\ref\PrimeiraAplicacao.dll
+C:\Users\almei\OneDrive\Desktop\PrimeiraAplicacao\PrimeiraAplicacao\obj\Debug\net8.0\PrimeiraAplicacao.sourcelink.json

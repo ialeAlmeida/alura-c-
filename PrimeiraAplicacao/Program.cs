@@ -1,18 +1,55 @@
-﻿//Exercícios módulo 01
+﻿//Exercícios módulo 02
 
-//Declaração de variável string
-string curso = "C#: criando a sua primeira aplicação";
-//Imprimir no console
-Console.WriteLine(curso);
+// --------------------------------------------
 
-string nome = "Iale";
-string sobrenome = "Almeida";
-//Concatenando
-Console.WriteLine("Nome da aluna: " + nome + " " + sobrenome);
-//Concatenando 02
-Console.WriteLine($"Olá, {nome}!");
-//Concatenando 03
-Console.WriteLine("Olá, {0}!", nome);
+int notaMedia = 8;
+
+if (notaMedia >= 5)
+{
+    Console.WriteLine("Nota suficiente para aprovação");
+}
+
+Console.WriteLine("******************************");
+
+List<string> linguagensDeProgramacao = new List<string>();
+
+linguagensDeProgramacao.Add("C#");
+linguagensDeProgramacao.Add("Java");
+linguagensDeProgramacao.Add("JavaScript");
+
+// --------------------------------------------
+
+Console.WriteLine(linguagensDeProgramacao[0]);
+
+Console.WriteLine("******************************");
+
+List<int> nums = new List<int> { 7, 89, 5, 43, 21, 33, 6, 4, 10 };
+
+Console.WriteLine("Digite um número: ");
+int num = int.Parse(Console.ReadLine()!);
+
+if (nums.Contains(num))
+{
+    Console.WriteLine($"O número digitado é {num} e está na lista");
+}
+else
+{
+    Console.WriteLine("Posição inválida");
+}
+
+////Declaração de variável string
+//string curso = "C#: criando a sua primeira aplicação";
+////Imprimir no console
+//Console.WriteLine(curso);
+
+//string nome = "Iale";
+//string sobrenome = "Almeida";
+////Concatenando
+//Console.WriteLine("Nome da aluna: " + nome + " " + sobrenome);
+////Concatenando 02
+//Console.WriteLine($"Olá, {nome}!");
+////Concatenando 03
+//Console.WriteLine("Olá, {0}!", nome);
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -33,7 +70,7 @@ Console.WriteLine("Olá, {0}!", nome);
 //void ExibirOpcoesDoMenu()
 //{
 //    Console.WriteLine("""
-        
+
 //        Menu
 //        1 - Registrar banda
 //        2 - Mostrar lista de bandas
