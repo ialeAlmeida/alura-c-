@@ -1,19 +1,28 @@
-﻿//Função
-void ExibirMensagemDeBoasVindas()
+﻿string mensagemDeBoasVindas = "Bem vinda a sua biblioteca de músicas online :)";
+
+//Função
+void ExibirLogo()
 {
-    Console.WriteLine("𝕧𝕚𝕣𝕥𝕦𝕒𝕝𝕃𝕚𝕓");    
-    Console.WriteLine("\nBem vinda a sua biblioteca online :)");
+    Console.WriteLine(@"
+░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
+██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
+╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
+░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
+██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");    
+    Console.WriteLine("\n", mensagemDeBoasVindas);
 }
 
 void ExibirOpcoesDoMenu()
 {
+    ExibirLogo();
     Console.WriteLine("""
 
         Menu
-        1 - Registrar livro
-        2 - Mostrar sua lista de livros
-        3 - Avaliar um livro
-        4 - Exibir a média de um livro
+        1 - Registrar banda
+        2 - Mostrar sua lista de bandas
+        3 - Avaliar uma banda
+        4 - Exibir a média de uma banda
         0 - Para sair
         """);
 
@@ -26,20 +35,32 @@ void ExibirOpcoesDoMenu()
     switch(respostaMenuNum)
     {
         case 1: 
-            RegistrarLivro();
+            RegistrarBanda();
             break;
         case 2: 
-            MostrarLivros();
+            //MostrarBandas();
             break;
         case 3: 
-            AvaliarLivro();
+            //AvaliarBanda();
             break;
         case 4: 
-            ExibirMedia();
+            //ExibirMediaBanda();
             break;
      }
 }
 
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("Registro de bandas");
+    Console.Write("Digite o nome da banda que você quer registrar: ");
+    string nomeBanda = Console.ReadLine()!;
+    Console.WriteLine($"A banda {nomeBanda} foi registrado com sucesso!");
+    Thread.Sleep(4000);
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+}
+
 //Chamando função pra ser executada
-ExibirMensagemDeBoasVindas();
+ExibirLogo();
 ExibirOpcoesDoMenu();
