@@ -1,4 +1,5 @@
 ﻿string mensagemDeBoasVindas = "Bem vinda a sua biblioteca de músicas online :)";
+List<string> bandas = new List<string>();
 
 //Função
 void ExibirLogo()
@@ -10,12 +11,11 @@ void ExibirLogo()
 ░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
 ██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");    
-    Console.WriteLine("\n", mensagemDeBoasVindas);
+    Console.WriteLine($"\n{mensagemDeBoasVindas}");
 }
 
 void ExibirOpcoesDoMenu()
 {
-    ExibirLogo();
     Console.WriteLine("""
 
         Menu
@@ -38,7 +38,7 @@ void ExibirOpcoesDoMenu()
             RegistrarBanda();
             break;
         case 2: 
-            //MostrarBandas();
+            MostrarBandas();
             break;
         case 3: 
             //AvaliarBanda();
@@ -49,16 +49,35 @@ void ExibirOpcoesDoMenu()
      }
 }
 
+void FinalFuncao()
+{
+    Thread.Sleep(2500);
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+}
 void RegistrarBanda()
 {
     Console.Clear();
     Console.WriteLine("Registro de bandas");
     Console.Write("Digite o nome da banda que você quer registrar: ");
     string nomeBanda = Console.ReadLine()!;
+    bandas.Add(nomeBanda);
     Console.WriteLine($"A banda {nomeBanda} foi registrado com sucesso!");
-    Thread.Sleep(4000);
+    FinalFuncao();
+}
+ 
+void MostrarBandas()
+{
     Console.Clear();
-    ExibirOpcoesDoMenu();
+    Console.WriteLine("Lista de bandas\n");
+    foreach (var banda in bandas)
+    {
+        Console.WriteLine(banda);
+    }
+    //Outra forma de imprimir(/correr) uma lista
+    //for (int i = 0; i < bandas.Count; i++) {
+    //Console.WriteLine(bandas[i]);
+    //}
 }
 
 //Chamando função pra ser executada
